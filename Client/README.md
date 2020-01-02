@@ -1,1 +1,5 @@
-# TODO: The website.. Probably in AngularJS
+# Made via Angular
+```
+cd project-santa
+ng server --open
+```
