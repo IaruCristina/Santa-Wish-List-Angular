@@ -2,15 +2,14 @@
     <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
         <mat-card>
 
-            <mat-card-title style="text-align: center;">{{tile.data.name}}</mat-card-title>
+            <mat-card-title style="text-align: center; text-shadow: 3px 2px hsla(120, 100%, 25%, 0.7);">{{tile.data.name}}</mat-card-title>
             <br>
-            
             <img style="max-width: 400px; max-height: 400px; width: auto; height: auto;" mat-card-image
-                src="{{tile.data.photo}}" alt="{{tile.text}}">
+                src="{{tile.data.photo}}" alt="{{tile.text}}" id="boxshadow">
                 <br>
             <mat-card-content>
-                <p>
-                    {{tile.data.description}}
+                <p style="text-align: center; text-shadow: 3px 2px rgba(255,0,0,0.3);">
+                   <b> {{tile.data.description}} </b>
                 </p>
             </mat-card-content>
             <button class="santaButton" mat-raised-button (click)="openDialog(tile.data)">Choose gift</button>
