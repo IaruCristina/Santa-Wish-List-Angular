@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { SantaModule } from './santa/santa.module';
 
 
 @NgModule({
@@ -19,6 +19,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SantaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

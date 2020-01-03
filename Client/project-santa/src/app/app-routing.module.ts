@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AppComponent } from './app.component';
 
+import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
+
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
   { path: 'main-page', component: MainPageComponent }
@@ -10,7 +12,12 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(
+    appRoutes,
+    {
+      preloadingStrategy: SelectivePreloadingStrategyService
+    }
+    )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
