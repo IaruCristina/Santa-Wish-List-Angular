@@ -2,9 +2,13 @@
     <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
         [style.background]="tile.color">
         <mat-card [style.background]="tile.color">
-            <mat-card-title>{{tile.data.name}}</mat-card-title>
+
+            <mat-card-title style="text-align: center;">{{tile.data.name}}</mat-card-title>
+            <br>
+            
             <img style="max-width: 400px; max-height: 400px; width: auto; height: auto;" mat-card-image
                 src="{{tile.data.photo}}" alt="{{tile.text}}">
+                <br>
             <mat-card-content>
                 <p>
                     {{tile.data.description}}

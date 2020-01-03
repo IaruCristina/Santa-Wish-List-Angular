@@ -6,3 +6,6 @@ Cute stuff site gata facut : https://www.whychristmas.com/cultures/japan.shtml
 Exemplu routing: https://stackblitz.com/angular/gollxnxqxom?file=src%2Findex.html
 christmas-effects - https://www.sitepoint.com/10-jquery-javascript-christmas-effects/
 christmas-button - https://codemyui.com/christmas-button-with-some-snow-on-top/
+
+
+Santa header: https://codepen.io/Alireza29675/pen/KwgwMy
