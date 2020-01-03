@@ -5,6 +5,7 @@ import { SantaRoutingModule } from './santa-routing.module';
 import { SantaListComponent } from './santa-list/santa-list.component';
 
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [
     CommonModule,
     SantaRoutingModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
   ],
 })
 export class SantaModule { }
