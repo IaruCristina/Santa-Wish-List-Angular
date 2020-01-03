@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SantaModule } from './santa/santa.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +27,7 @@ export class AppModule {
 
 // Diagnostic only: inspect router configuration
   constructor(router: Router) {
+
     // Use a custom replacer to display function names in the route configs
     // const replacer = (key, value) => (typeof value === 'function') ? value.name : value;
 

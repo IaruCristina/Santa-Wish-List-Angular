@@ -27,7 +27,7 @@
               "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/snow.js"]
           },
           "configurations": {
             "production": {
