@@ -11,7 +11,7 @@ export interface DialogData {
 @Component({
   selector: 'app-santa-list',
   templateUrl: './santa-list.component.html',
-  styleUrls: ['./santa-list.component.css']
+  styleUrls: ['./santa-list.component.css', '../custom-santa-button.css']
 })
 export class SantaListComponent implements OnInit {
 

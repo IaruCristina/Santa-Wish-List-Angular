@@ -1,7 +1,6 @@
 <mat-grid-list cols="3" rowHeight="600px">
-    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
-        [style.background]="tile.color">
-        <mat-card [style.background]="tile.color">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+        <mat-card>
 
             <mat-card-title style="text-align: center;">{{tile.data.name}}</mat-card-title>
             <br>
@@ -14,7 +13,7 @@
                     {{tile.data.description}}
                 </p>
             </mat-card-content>
-            <button mat-raised-button (click)="openDialog(tile.data)">Choose gift</button>
+            <button class="santaButton" mat-raised-button (click)="openDialog(tile.data)">Choose gift</button>
         </mat-card>
     </mat-grid-tile>
 </mat-grid-list>
