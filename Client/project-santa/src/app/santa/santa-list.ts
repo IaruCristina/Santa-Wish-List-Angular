@@ -1,11 +1,12 @@
 import { Santa, Gift } from './santa'
 
-
 /* GIFT_LIST */
 const GIFT_LIST: Gift[] = [
     { id: 0, name: 'Charcoal', description: 'Someone\'s been naughty..', photo: 'https://cutt.ly/SrueCtF' },
     { id: 1, name: 'Red Apples', description: 'Healthy and delicious!', photo: 'https://cutt.ly/SrueCtF' }
 ]
+
+export const GIFT_SHOPPING_LIST: Gift[] = []
 
 export const GIFT_DICT = {
     'Charcoal': GIFT_LIST[0],

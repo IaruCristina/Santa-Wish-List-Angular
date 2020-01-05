@@ -1,8 +1,9 @@
 <h1 mat-dialog-title>Select your gifts!</h1>
 <div mat-dialog-content>
     <section *ngFor="let gift of data.wishlist">
-        <mat-checkbox>{{gift}}</mat-checkbox>
+        <mat-checkbox [checked]= "isChecked(gift)" (change)="toggle($event, gift)">{{gift[1]}}</mat-checkbox>
     </section>
+
 </div>
 <div mat-dialog-actions>
     <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
