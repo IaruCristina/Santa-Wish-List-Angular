@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', redirectTo: '/santa', pathMatch: 'full' }, // component: AppComponent
   { path: 'main-page', component: MainPageComponent }
 ];
 

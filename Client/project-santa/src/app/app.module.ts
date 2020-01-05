@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SantaModule } from './santa/santa.module';
 
+import {MatButtonModule} from '@angular/material/button'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { SantaModule } from './santa/santa.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SantaModule
+    SantaModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
