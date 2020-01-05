@@ -13,6 +13,7 @@ export class Gift {
     name: string;
     description: string;
     photo: string;
+    price: string;
 }
 
 export class Tile {

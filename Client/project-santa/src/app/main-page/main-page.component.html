@@ -1,1 +1,21 @@
-<h2>Page not found</h2>
+<h1> Review Your Whishlist!</h1>
+
+<ul class="giftList">
+  <li *ngFor="let currentGift of giftList"
+    [class.selected]="currentGift === selectedGift"
+    (click)="onSelect(currentGift)">
+    <span class="badge">{{currentGift.id}}</span> {{currentGift.name}} {{currentGift.price}} {{currentGift.gift_link}}
+  </li>
+</ul>
+
+<div *ngIf="selectedGift">
+
+  <h2>{{selectedGift.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedGift.id}}</div>
+  <div>
+    <label>name: {{selectedGift.name}}
+      <!--<input [(ngModel)]="selectedGift.name" placeholder="name"/>-->
+    </label>
+  </div>
+
+</div>
