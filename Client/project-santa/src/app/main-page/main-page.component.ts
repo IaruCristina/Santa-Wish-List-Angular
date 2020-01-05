@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GIFT_SHOPPING_LIST } from '../santa/santa-list';
 import { GiftItem } from 'src/app/main-page/Gift';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 //
 @Component({
   selector: 'app-main-page',
@@ -28,6 +30,25 @@ export class MainPageComponent implements OnInit {
     this.selectedGift = currentGift;
   }
 
+}
+
+export class StepperVerticalExample implements OnInit {
+  isLinear = false;
+  firstFormGroup : FormGroup;
+  secondFormGroup: FormGroup;
+
+  constructor(private _formBuilder: FormBuilder) {}
+ 
+  ngOnInit() {
+    
+    this.firstFormGroup = new FormGroup({});
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+  }
 }
 
 /*

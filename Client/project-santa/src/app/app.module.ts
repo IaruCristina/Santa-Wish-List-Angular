@@ -10,6 +10,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { SantaModule } from './santa/santa.module';
 
 import {MatButtonModule} from '@angular/material/button'; 
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,12 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     SantaModule,
-    MatButtonModule
+    MatButtonModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

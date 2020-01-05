@@ -1,21 +1,85 @@
-<h1> Review Your Whishlist!</h1>
+<h1>   Review Your Whishlist!</h1>
+
+<br>
+<br>
 
 <ul class="giftList">
   <li *ngFor="let currentGift of giftList"
     [class.selected]="currentGift === selectedGift"
     (click)="onSelect(currentGift)">
-    <span class="badge">{{currentGift.id}}</span> {{currentGift.name}} {{currentGift.price}} {{currentGift.gift_link}}
+    <span class="badge">{{currentGift.id}}</span> {{currentGift.name}} {{currentGift.price}} 
   </li>
 </ul>
 
 <div *ngIf="selectedGift">
 
-  <h2>{{selectedGift.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedGift.id}}</div>
+  <h2 style="margin-left:2.5em"> {{selectedGift.name | uppercase}} Details</h2>
   <div>
-    <label>name: {{selectedGift.name}}
+    <label><b>Name:</b> {{selectedGift.name}}
       <!--<input [(ngModel)]="selectedGift.name" placeholder="name"/>-->
     </label>
+    <br>
+    <br>
+    <label><b>Description:</b> {{selectedGift.gift_link.description}}
+        <!--<input [(ngModel)]="selectedGift.name" placeholder="name"/>-->
+      </label>
+      <br>
+      <br>
+      <label><b>Photo:</b> 
+        <br>
+        <pre>    <img style="max-width: 400px; max-height: 400px; width: auto; height: auto;" mat-card-image
+        src="{{selectedGift.gift_link.photo}}" alt="{{selectedGift.gift_link.name}}" id="boxshadow"></pre>
+        <!--<input [(ngModel)]="selectedGift.name" placeholder="name"/>-->
+      </label>
+      <br>
+      <label><b>Price:</b> {{selectedGift.gift_link.price}}
+        <!--<input [(ngModel)]="selectedGift.name" placeholder="name"/>-->
+      </label>
+      <br>
+      <br>
   </div>
 
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-vertical-stepper #stepper>
+    <mat-step stepControl="firstFormGroup">
+      <form formGroup="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step stepControl="secondFormGroup">
+      <form formGroup="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
 </div>
