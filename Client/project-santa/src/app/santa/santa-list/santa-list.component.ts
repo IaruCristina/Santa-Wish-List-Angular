@@ -43,18 +43,20 @@ export class SantaListComponent implements OnInit {
 
   getMeta(url: string) {
     var img = new Image();
-    img.addEventListener("load", function () {
-      alert(this.naturalWidth + ' ' + this.naturalHeight);
-    });
     img.src = url;
+    return img
   }
 
   ngOnInit() {
 
     /* Dynamically load the tile data */
-    for (let santa of this.data) [
-      this.tiles.push(new Tile(santa, santa.name, 1, 1, 'lightblue')) // TODO: figure out aspect ratio of image and decide how many rows/cols it's gonna occupy
-    ]
+    for (let santa of this.data) {
+      let metaData = this.getMeta(santa.photo);
+      let height = 20;
+      if (metaData.height / 35 > 10)
+      { height = metaData.height / 35; }
+      this.tiles.push(new Tile(santa, santa.name, 1, height, 'lightblue')); // TODO: figure out aspect ratio of image and decide how many rows/cols it's gonna occupy
+    }
   }
 
 }
