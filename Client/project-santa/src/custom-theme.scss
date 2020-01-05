@@ -9,19 +9,22 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-
+$custom-accent-color: #C96262;
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$project-santa-primary: mat-palette($mat-blue-grey);
-$project-santa-accent: mat-palette($mat-pink, A200, A100, A400);
+$project-santa-primary: mat-palette($mat-blue-grey, A100, A400, A200);
+$project-santa-accent: mat-palette($mat-red, 900, 300, A700);
 
 // The warn palette is optional (defaults to red).
-$project-santa-warn: mat-palette($mat-blue-grey);
+$project-santa-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$project-santa-theme: mat-dark-theme($project-santa-primary, $project-santa-accent, $project-santa-warn);
+$project-santa-theme: mat-light-theme($project-santa-primary, $project-santa-accent, $project-santa-warn);
+
+
+
 
 
 @include angular-material-theme($project-santa-theme);

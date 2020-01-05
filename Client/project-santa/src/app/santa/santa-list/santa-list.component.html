@@ -1,7 +1,7 @@
 
 <mat-grid-list cols="3" rowHeight="600px">
-    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
-        <mat-card>
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" >
+        <mat-card style="background-color: #C7D6ED;">
 
             <mat-card-title style="text-align: center; text-shadow: 3px 2px hsla(120, 100%, 25%, 0.7);">{{tile.data.name}}</mat-card-title>
             <br>
