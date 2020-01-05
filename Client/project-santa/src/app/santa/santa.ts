@@ -5,7 +5,14 @@ export class Santa {
     description: string;
     photo: string;
     song: string;
-    wishlist = [];
+    wishlist = []; // Wishlist of gifts;
+};
+
+export class Gift {
+    id: number;
+    name: string;
+    description: string;
+    photo: string;
 }
 
 export class Tile {

@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { SANTA_LIST } from '../santa-list';
-import { Santa, Tile } from '../santa';
+import { Santa, Tile, Gift } from '../santa';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -25,10 +25,14 @@ export class SantaListComponent implements OnInit {
   openDialog(santa: Santa): void {
 
     console.log(santa.wishlist)
+    var giftList = []
+    santa.wishlist.forEach(gift => {
+      giftList.push(gift.name)
+    });
 
     const dialogRef = this.dialog.open(SantaGiftDialog, {
-      width: '250px',
-      data: { wishlist: santa.wishlist }
+      width: '250px', 
+      data: { wishlist: giftList }
     });
 
     dialogRef.afterClosed().subscribe(result => {
